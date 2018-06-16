@@ -1,0 +1,33 @@
+.nav
+    padding: 10px 0
+    background: #fff
+
+    li
+        &:hover
+            background: #f5f7f9
+
+        a
+            line-height: 34px
+            display: block
+            cursor: pointer
+            padding: 0 20px
+            color: #555
+
+            i
+                font-size: 14px
+                margin-right: 6px
+
+        .active
+            position: relative
+            background: #f5f7f9
+
+            &:after
+                content: ' '
+                position: absolute
+                top: 50%
+                margin-top: -3px
+                right: 15px
+                width: 6px
+                height: 6px
+                border-radius: 50%
+                background-color: #bbb

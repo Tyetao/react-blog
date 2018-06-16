@@ -1,0 +1,77 @@
+
+@import '../../assets/stylus/_variables.styl'
+
+.comments
+    padding: 20px 0 0 0
+    border-top: 1px solid #d9dde1
+    display: flex
+    justify-content: space-between
+
+.avatar
+    width: 48px
+    height: 48px
+    margin-right: 15px
+    border-radius: 50%
+
+    a
+        display: block
+        border: 1px solid #eee
+        padding: 2px
+        box-sizing: border-box
+        border-radius: 50%
+
+        img
+            border-radius: 50%
+
+.comment
+    flex: 1
+
+.thumbUp
+    margin-bottom: 20px
+    line-height: 32px
+
+.username
+    display: block
+    color: #93999f
+    margin-bottom: 10px
+
+.content
+    margin-bottom: 10px
+
+.good, .bed, .reply
+    display: inline-block
+    height: 32px
+    margin-right: 16px
+    border-radius: 2px
+    color: #93999F
+    box-sizing: border-box
+    line-height: 32px
+    cursor: pointer
+
+    i
+        font-size: 12px
+        margin-right: 4px
+        color: #93999F
+
+.datetime
+    color: #93999F
+    float: right
+
+.replyt
+    margin-top: 10px
+    margin-bottom: 10px
+    border-radius: 4px
+
+    .textarea
+        padding-left: 10px
+        padding-top: 6px
+        min-height: 100px
+        width: 100%
+        outline: none
+        resize: none
+        border: 1px solid rgb(204, 204, 204)
+        box-sizing: border-box
+
+        &:before
+            content: attr(placeholder)
+            color: #93999f

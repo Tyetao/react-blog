@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        #a {
+            /* padding-top: 60px; */
+        }
+
+        #test {
+            line-height: 40px;
+            background: #cccccc
+        }
+
+        li {
+            line-height: 200px;
+            border-bottom: 1px solid #ccc;
+            padding-left: 30px;
+            box-sizing: border-box
+        }
+    </style>
+</head>
+
+<body>
+    <div id="a">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>0</li>
+        </ul>
+        <div id="test">789</div>
+    </div>
+</body>
+<script>
+    window.onload = () => {
+        const windowHeight = window.screen.height;
+        window.addEventListener('scroll', scrollFn2, false);
+    }
+
+    function scrollFn(windowHeight) {
+        const x = document.getElementById('test').getBoundingClientRect().top;
+        console.log(x)
+        console.log(windowHeight)
+        console.log(x < windowHeight)
+    }
+
+    function scrollFn2() {
+        // 滚动高度
+        const scrollHeight =  document.documentElement.scrollTop || document.body.scrollTo;
+        // 页面高度
+        const pageHeight = document.body.clientHeight;
+        // 浏览器视口高度
+        const viewportHeight = document.documentElement.clientHeight;
+        // 底部剩余高度
+        const bottomHeight = pageHeight - scrollHeight - viewportHeight;
+        console.log(1);
+        if (bottomHeight < 40) {
+            window.removeEventListener('scroll', scrollFn2, false);
+        }
+    }
+</script>
+
+</html>

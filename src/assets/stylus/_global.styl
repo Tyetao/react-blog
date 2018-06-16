@@ -1,0 +1,49 @@
+@import '../../assets/stylus/_variables.styl'
+
+body
+    background: #f5f7f9
+    font-size: 12px
+    overflow-y: scroll
+
+:global
+    // 宽度为60的按钮
+    .btn60
+        float: right
+        margin-top: 10px
+        btn()
+
+    // 设置评论编辑器
+    .w-e-text
+        padding-top: 6px !important
+        overflow-y: unset !important
+        min-height: 100px
+
+        &:empty:before
+            content: attr(placeholder)
+            color: #93999f
+
+        &:focus
+            content: none
+
+        p
+            margin: 0 !important
+
+    .w-e-text-container
+        height: auto !important
+
+    // 清除浮动
+    .fix:after
+        content: ''
+        display: table
+        clear: both
+
+    .fix
+        *zoom: 1
+
+    .fade-enter
+        opacity: 0
+        z-index: 1
+
+    .fade-enter.fade-enter-active
+        opacity: 1
+        transition: opacity 250ms ease-in
