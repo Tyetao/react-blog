@@ -24,13 +24,14 @@ class UpPull extends Component {
 
     scrollFn() {
         // 滚动高度
-        const scrollHeight = document.documentElement.scrollTop || document.body.scrollTo;
+        const scrollHeight = document.documentElement.scrollTop || document.body.scrollTop;
         // 页面高度
         const pageHeight = document.body.clientHeight;
         // 浏览器视口高度
         const viewportHeight = document.documentElement.clientHeight;
         // 底部剩余高度
         const bottomHeight = pageHeight - scrollHeight - viewportHeight;
+        
         if (bottomHeight <= 40 && this.state.isLoadingMore) {
             this.refs.wrapper.style.display = 'block';
             this.setState((preState) => ({

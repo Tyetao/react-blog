@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import E from 'wangeditor';
-import { Prompt } from 'react-router-dom';
+// import { Prompt } from 'react-router-dom';
 import CommentList from 'components/CommentList/CommentList';
 import style from './ArticleDetails.styl';
 import { getArticleDetails } from 'api';
@@ -49,18 +49,18 @@ export default class ArticleDetails extends Component {
                 <div className={style.line}></div>
                 <div ref="editorElem"></div>
                 <button className="btn60" onClick={this.clickHandle.bind(this)}>提交</button>
-                <Prompt
+                {/* <Prompt
                     when={true}
                     message={() => {
                         document.getElementById('catalog').style.display = 'none';
                     }}
-                />
+                /> */}
             </div>
         )
     }
 
     componentWillMount() {
-        document.getElementById('catalog').style.display = 'block';
+        // document.getElementById('catalog').style.display = 'block';
         this.loadMoreDataFn();
     }
 

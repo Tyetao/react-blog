@@ -23,9 +23,9 @@ export default class App extends Component {
                     <div>
                         <div className={style['line-top']}></div>
                         <div className={style.main}>
-                            <div id="catalog" className={style['main-left']}>
+                            {/* <div id="catalog" className={style['main-left']}>
                                 <Catalog />
-                            </div>
+                            </div> */}
                             <div className={style['main-center']}>
                                 {getRouter(location)}
                             </div>
